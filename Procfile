@@ -1,1 +1,1 @@
-web:web-demo -port=$PORT
+web: webdemo -port=$PORT
