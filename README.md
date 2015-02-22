@@ -7,30 +7,42 @@ Based on the following tutorial [getting started with Go][]
 ### Deploy and run locally
 
 ```
+$git clone https://github.com/bchoomnuan/webdemo.git
+$cd webdemo
 $go build
 
-# Then to run the code locally
+## Then to run the code locally
 $PORT=3000 ./webdemo
+```
 
-# Open your browser to `http://localhost:3000`
-# and make sure that it works properly
+Open your browser to `http://localhost:300` should give you back 'hello world'
+
+Test via `curl`
+
+```
+$curl -I http://localhost:3000
+
+HTTP/1.1 200 OK
+Date: Sun, 22 Feb 2015 06:23:47 GMT
+Content-Length: 12
+Content-Type: text/plain; charset=utf-8
 ```
 
 ### Deploy to Heroku
 
-Then what you will get will be something like
+Now we know that the app is running locally, we are now ready to deploy this to Heroku
 
 ```sh
-# Login to Heroku
+## Login to Heroku
 $heroku login
 
-# Create the new Heroku app using Go buildpack
+## Create the new Heroku app using Go buildpack
 $heroku create -b https://github.com/kr/heroku-buildpack-go.git
 
-# Show the app name (take note for the next step)
+## Show the app name (take note for the next step)
 $heroku apps --apps
 
-# You are now ready to push deploy the code to Heroku
+## You are now ready to push deploy the code to Heroku
 $git push heroku master
 ```
 
@@ -67,10 +79,10 @@ If you do everything correctly, you should be able to access the result in your
 browser like so
 
 ```
-# open the app in your browser
+## Open the app in your browser
 $heroku open --apps <YOUR-HEROKU-APP-NAME>
 
-# e.g. In this example we need to use
+## e.g. In this example we need to use
 $heroku open --apps vast-seirra-8530
 ```
 
