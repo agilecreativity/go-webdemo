@@ -7,7 +7,7 @@ Based on the following tutorial [getting started with Go][]
 ### Deploy and run locally
 
 ```
-$git clone https://github.com/bchoomnuan/webdemo.git
+$git clone https://github.com/agilecreativity/go-webdemo.git
 $cd webdemo
 $go build
 
